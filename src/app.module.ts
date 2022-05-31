@@ -5,10 +5,11 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { TodoModule } from './todo/todo.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { ItemModule } from './item/item.module';
 
 const mongoose = MongooseModule.forRoot('mongodb://localhost/shopping');
 @Module({
-  imports: [mongoose, TodoModule, UserModule, AuthModule],
+  imports: [mongoose, TodoModule, UserModule, AuthModule, ItemModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -10,5 +10,6 @@ import { TodoSchema, User } from './schemas/user.schema';
   imports: [
     MongooseModule.forFeature([{ name: User.name, schema: TodoSchema }]),
   ],
+  exports: [UserService],
 })
 export class UserModule {}

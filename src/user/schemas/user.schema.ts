@@ -21,4 +21,4 @@ export class User {
   deletedAt?: Date;
 }
 
-export const TodoSchema = SchemaFactory.createForClass(User);
+export const UserSchema = SchemaFactory.createForClass(User);

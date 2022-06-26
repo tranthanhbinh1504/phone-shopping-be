@@ -5,11 +5,12 @@ import { AuthService } from './auth.service';
 import { LocalStrategy } from './local.strategy';
 import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from 'src/constant/constant';
+import { SharedModule } from 'src/shared/shared.module';
 
 @Module({
   controllers: [AuthController],
   imports: [
-    UserModule,
+    SharedModule,
     JwtModule.register({
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '60s' },
